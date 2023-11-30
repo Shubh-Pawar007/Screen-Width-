@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import "./width.css"
 
 export const Width = () => {
     const [width,setWidth]=useState({innerScreenwidth:window.screen.width,innerScreenHeight:window.screen.height})
@@ -14,7 +15,7 @@ export const Width = () => {
       }
     },[])
   return (
-    <div style={{width:"100vw",height:"100vh",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center"}}>
+    <div className='container' style={{width:"100vw",height:"100vh",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",}}>
         <h1>Your Screen Width is <span style={{color:"teal"}}>{width.innerScreenwidth}</span></h1>
         <h1>Your Screen Height is <span style={{color:"teal"}}>{width.innerScreenHeight}</span></h1>
 
